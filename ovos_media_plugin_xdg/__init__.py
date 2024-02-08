@@ -3,7 +3,7 @@ import subprocess
 import time
 from time import sleep
 
-from ovos_plugin_manager.templates.media import AudioPlayerBackend, VideoPlayerBackend, MediaBackend
+from ovos_plugin_manager.templates.media import AudioPlayerBackend, WebPlayerBackend, VideoPlayerBackend, MediaBackend
 from ovos_utils.log import LOG
 
 
@@ -170,3 +170,11 @@ class XDGOpenAudioService(AudioPlayerBackend, XDGOpenMediaService):
 class XDGOpenVideoService(VideoPlayerBackend, XDGOpenMediaService):
     def __init__(self, config, bus=None):
         super().__init__(config, bus)
+
+
+class XDGOpenWebService(WebPlayerBackend, XDGOpenMediaService):
+    def __init__(self, config, bus=None):
+        super().__init__(config, bus)
+
+    def supported_uris(self):
+        return ['http', 'https']

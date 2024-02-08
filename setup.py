@@ -49,8 +49,9 @@ def required(requirements_file):
                 if pkg.strip() and not pkg.startswith("#")]
 
 
-PLUGIN_ENTRY_POINT = 'ovos-media-audio-plugin-xdg=ovos_media_plugin_xdg:XDGOpenAudioService'
-VIDEO_ENTRY_POINT = 'ovos-media-video-plugin-xdg=ovos_media_plugin_xdg:XDGOpenVideoService'
+PLUGIN_ENTRY_POINT = 'ovos-media-audio-plugin-xdg=ovos_media_plugin_webbrowser:XDGOpenAudioService'
+VIDEO_ENTRY_POINT = 'ovos-media-video-plugin-xdg=ovos_media_plugin_webbrowser:XDGOpenVideoService'
+WEB_ENTRY_POINT = 'ovos-media-web-plugin-xdg=ovos_media_plugin_webbrowser:XDGOpenWebService'
 
 
 setup(
@@ -66,5 +67,6 @@ setup(
     package_data={'': package_files('ovos_media_plugin_xdg')},
     keywords='ovos audio OCP plugin',
     entry_points={'opm.media.audio': PLUGIN_ENTRY_POINT,
-                  'opm.media.video': VIDEO_ENTRY_POINT}
+                  'opm.media.video': VIDEO_ENTRY_POINT,
+                  'opm.media.web': WEB_ENTRY_POINT}
 )

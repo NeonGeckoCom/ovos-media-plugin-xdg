@@ -21,8 +21,9 @@ xdg-open is for use inside a desktop session only. It is not recommended to use 
 {
  "media": {
 
-    // keys are the strings defined in "audio_players"
-    "preferred_audio_services": ["mplayer", "vlc", "xdg"],
+    "preferred_audio_services": ["vlc", "xdg"],
+    "preferred_video_services": ["xdg"],
+    "preferred_web_services": ["webbrowser", "xdg"],
 
     // PlaybackType.AUDIO handlers
     "audio_players": {
@@ -38,13 +39,26 @@ xdg-open is for use inside a desktop session only. It is not recommended to use 
             // deactivate a plugin by setting to false
             "active": true
         }
-    }
-    
+    },    
     "video_players": {
         // xdg-open to handle uris
         "xdg": {
             // the plugin name
             "module": "ovos-media-video-plugin-xdg",
+
+            // users may request specific handlers in the utterance
+            // using these aliases
+            "aliases": ["System", "Desktop", "OS", "XDG Open"],
+
+            // deactivate a plugin by setting to false
+            "active": true
+        }
+    },    
+    "web_players": {
+        // xdg-open to handle uris
+        "xdg": {
+            // the plugin name
+            "module": "ovos-media-web-plugin-xdg",
 
             // users may request specific handlers in the utterance
             // using these aliases
