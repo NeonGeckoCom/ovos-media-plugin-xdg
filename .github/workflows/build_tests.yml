@@ -7,7 +7,7 @@ on:
     branches:
       - dev
     paths-ignore:
-      - 'ovos_media_plugin_webbrowser/version.py'
+      - 'ovos_media_plugin_xdg/version.py'
       - 'test/**'
       - 'examples/**'
       - '.github/**'
