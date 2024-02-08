@@ -28,7 +28,7 @@ allow_unknown = False
 allow_unlicense = True
 allow_ambiguous = False
 
-pkg_name = "ovos_media_plugin_xdg"
+pkg_name = "ovos_media_plugin_webbrowser"
 
 
 class TestLicensing(unittest.TestCase):

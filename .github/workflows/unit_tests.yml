@@ -4,7 +4,7 @@ on:
     branches:
       - dev
     paths-ignore:
-      - 'ovos_media_plugin_xdg/version.py'
+      - 'ovos_media_plugin_webbrowser/version.py'
       - 'requirements/**'
       - 'examples/**'
       - '.github/**'
@@ -18,7 +18,7 @@ on:
     branches:
       - master
     paths-ignore:
-      - 'ovos_media_plugin_xdg/version.py'
+      - 'ovos_media_plugin_webbrowser/version.py'
       - 'requirements/**'
       - 'examples/**'
       - '.github/**'
